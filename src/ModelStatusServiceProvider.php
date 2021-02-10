@@ -2,6 +2,7 @@
 
 namespace Fabpl\ModelStatus;
 
+use Fabpl\ModelStatus\Console\InstallCommand;
 use Fabpl\ModelStatus\Console\PublishCommand;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +14,6 @@ class ModelStatusServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->configureCommands();
-        $this->configureMigrations();
         $this->configurePublishing();
     }
 
@@ -34,19 +34,10 @@ class ModelStatusServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
+                InstallCommand::class,
                 PublishCommand::class,
             ]);
         }
-    }
-
-    /**
-     * Configure database migrations for the package.
-     *
-     * @return void
-     */
-    protected function configureMigrations(): void
-    {
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
     /**

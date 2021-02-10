@@ -4,11 +4,19 @@ Assign statuses to your Eloquent Model.
 
 ## Installation
 
+Install package via composer:
+
 ```bash
 composer require fabpl/laravel-model-status
 ```
 
-Optionally you can publish `config` and `migrations` files with:
+Run install artisan command:
+
+```bash
+php artisan model-status:install
+```
+
+Optionally you can publish `config` files with:
 
 ```bash
 php artisan model-status:publish
