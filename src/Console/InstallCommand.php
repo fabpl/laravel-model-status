@@ -27,5 +27,7 @@ class InstallCommand extends Command
     {
         // Migrations...
         $this->callSilent('vendor:publish', ['--tag' => 'model-status-migrations']);
+
+        $this->info('Model Status resources installed.');
     }
 }

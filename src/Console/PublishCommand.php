@@ -27,5 +27,7 @@ class PublishCommand extends Command
     {
         // Configuration...
         $this->callSilent('vendor:publish', ['--tag' => 'model-status-config']);
+
+        $this->info('Model Status resources published.');
     }
 }
