@@ -55,7 +55,7 @@ class ModelStatusServiceProvider extends ServiceProvider
 
             // Migrations...
             $this->publishes([
-                __DIR__ . '/../database/migrations/2021_01_01_000000_create_statuses_table.php' => database_path(date('Y_m_d_His', time()) . '_create_statuses_table.php'),
+                __DIR__ . '/../database/migrations/2021_01_01_000000_create_statuses_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_statuses_table.php'),
             ], 'model-status-migrations');
         }
     }
