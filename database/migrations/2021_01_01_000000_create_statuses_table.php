@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateStatusesTable extends Migration
 {
-    /**
-     *
-     */
     public function up(): void
     {
         Schema::create(config('model-status.table_name', 'statuses'), function (Blueprint $table) {
@@ -19,9 +16,6 @@ class CreateStatusesTable extends Migration
         });
     }
 
-    /**
-     *
-     */
     public function down(): void
     {
         Schema::dropIfExists(config('model-status.table_name', 'statuses'));

@@ -32,6 +32,7 @@ trait HasStatuses
      * Check if given status is available.
      *
      * @param string $status
+     *
      * @return bool
      */
     public function isValidStatus(string $status): bool
@@ -43,8 +44,10 @@ trait HasStatuses
      * Set status.
      *
      * @param string $status
-     * @return $this
+     *
      * @throws InvalidStatusException
+     *
+     * @return $this
      */
     public function setStatus(string $status): self
     {

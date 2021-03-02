@@ -10,6 +10,7 @@ class InvalidStatusException extends Exception
      * Create InvalidStatusException with custom message.
      *
      * @param string $status
+     *
      * @return InvalidStatusException
      */
     public static function factory(string $status): InvalidStatusException

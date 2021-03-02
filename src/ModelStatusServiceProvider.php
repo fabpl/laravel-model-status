@@ -50,12 +50,12 @@ class ModelStatusServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             // Configuration...
             $this->publishes([
-                __DIR__ . '/../config/model-status.php' => config_path('model-status.php'),
+                __DIR__.'/../config/model-status.php' => config_path('model-status.php'),
             ], 'model-status-config');
 
             // Migrations...
             $this->publishes([
-                __DIR__ . '/../database/migrations/2021_01_01_000000_create_statuses_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_statuses_table.php'),
+                __DIR__.'/../database/migrations/2021_01_01_000000_create_statuses_table.php' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_statuses_table.php'),
             ], 'model-status-migrations');
         }
     }
@@ -67,6 +67,6 @@ class ModelStatusServiceProvider extends ServiceProvider
      */
     protected function registerConfig(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/model-status.php', 'model-status');
+        $this->mergeConfigFrom(__DIR__.'/../config/model-status.php', 'model-status');
     }
 }
