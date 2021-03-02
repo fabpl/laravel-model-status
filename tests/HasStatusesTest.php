@@ -32,9 +32,6 @@ class HasStatusesTest extends TestCase
         $this->model = TestModel::create(['name' => 'test']);
     }
 
-    /**
-     *
-     */
     public function testSetterTest(): void
     {
         $this->model->setStatus('one');
@@ -42,9 +39,6 @@ class HasStatusesTest extends TestCase
         $this->assertEquals('one', $this->model->status);
     }
 
-    /**
-     *
-     */
     public function testSettersTest(): void
     {
         $this->model->setStatus('one');
@@ -55,9 +49,6 @@ class HasStatusesTest extends TestCase
         $this->assertEquals('two', $this->model->status);
     }
 
-    /**
-     *
-     */
     public function testInvalidStatusExceptionTest(): void
     {
         $this->expectException(InvalidStatusException::class);
