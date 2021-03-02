@@ -2,6 +2,8 @@
 
 Assign statuses to your Eloquent Model.
 
+![styleci.io](https://github.styleci.io/repos/337483474/shield)
+
 ## Installation
 
 Install package via composer:
